@@ -1,11 +1,13 @@
 Summary:	Platform independent hotkey handling for Gtk+ applications
 Name:		gtkhotkey
 Version:	0.2.1
-Release:	0.1
+Release:	0.2
 License:	LGPL v3+
 Group:		Libraries
 Source0:	https://launchpad.net/gtkhotkey/0.2/0.2.1/+download/%{name}-%{version}.tar.gz
 # Source0-md5:	bfdc73e68e9adbe0d506d31a25862914
+# see https://bugs.launchpad.net/gtkhotkey/+bug/898334
+Patch0:		%{name}-glib.patch
 URL:		https://launchpad.net/gtkhotkey
 BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -31,6 +33,7 @@ Static Gtk Hotkey library.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %configure
