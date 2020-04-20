@@ -1,7 +1,7 @@
 Summary:	Platform independent hotkey handling for Gtk+ applications
 Name:		gtkhotkey
 Version:	0.2.1
-Release:	6
+Release:	7
 License:	LGPL v3+
 Group:		Libraries
 Source0:	https://launchpad.net/gtkhotkey/0.2/0.2.1/+download/%{name}-%{version}.tar.gz
